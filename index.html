@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="rps-styles/home1.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <p class="title">ROCK-PAPER-SCISSORS</p>
+      </header>
+
+      <section class="controls">
+        <button class="move-button" onclick="gameResult('Rock');">
+          <img src="rps-images/Rock-emoji.png" class="move-icon" alt="Rock">
+        </button>
+
+        <button class="move-button" onclick="gameResult('Paper');">
+          <img src="rps-images/Paper-emoji.png" class="move-icon" alt="Paper">
+        </button>
+
+        <button class="move-button" onclick="gameResult('Scissor');">
+          <img src="rps-images/Scissor-emoji.png" class="move-icon" alt="Scissor">
+        </button>
+      </section>
+
+      <section class="status">
+        <p class="show-moves"></p>
+        <p class="show-result">Let's Start</p>
+        <p class="show-score">Wins : , Losts : , Ties : .</p>
+      </section>
+
+      <div class="actions">
+        <button class="reset-button reset-score-button" onclick="resetScore();">
+          Reset Score
+        </button>
+      </div>
+    </main>
+    <script src="rps-js/home2.js"></script>
+  </body>
+</html>
