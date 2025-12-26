@@ -19,6 +19,24 @@ let score=JSON.parse(localStorage.getItem('Scores')) ||{
         return computerSelected;
        }
 
+       let isautoPlaying=false;
+       let intervalId;
+       function autoPlay(){
+        if(!isautoPlaying){
+        intervalId = setInterval(function(){
+          let playerMove=computerMove();
+          gameResult(playerMove);
+        },1000);
+        isautoPlaying=true;
+        document.querySelector('.autoplay-button').innerHTML=`Stop Play`;
+        }
+        else{
+          clearInterval(intervalId);
+          isautoPlaying=false;
+          document.querySelector('.autoplay-button').innerHTML=`Auto Play`;
+        }
+       }
+
        function gameResult(move){
         let computerSelected=computerMove();
         let owrMove=move;
