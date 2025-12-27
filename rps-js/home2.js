@@ -77,7 +77,7 @@ let score=JSON.parse(localStorage.getItem('Scores')) ||{
         localStorage.setItem('Scores',JSON.stringify(score));
 
         document.querySelector('.show-moves').innerHTML=`You <img src="rps-images/${move}-emoji.png" class="move-icon" >  <img src="rps-images/${computerSelected}-emoji.png" class="move-icon"> Computer`;
-        if(score.win>score.lost && score.win>score.lost){
+        if(score.win>score.lost && score.win>score.tie){
           result='You Win';
         }
         else if(score.lost>score.tie && score.lost>score.win){
@@ -110,3 +110,4 @@ let score=JSON.parse(localStorage.getItem('Scores')) ||{
         localStorage.removeItem('Scores');
         updateScore();
        }
+
